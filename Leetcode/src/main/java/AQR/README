@@ -1,0 +1,17 @@
+1. Test has list of questions.
+2. Question has list of answers
+3. Each answer indicate if it is correct or not and the score of it.
+4. There is many to many relation between Test and Question.
+   When admin create test, they can pick questions from question list and associate question with test.
+   This is why there is TestQuestion table.
+   Same relation between Question & Answer
+5. For each user,
+   They have list of test they have took.
+   each test associate with list of questions.
+   in each question, there is list of official answers and the user answer which will be used to score the test.
+6. The UserTest table stores
+   1), the tests the user have taken,
+   2), question ids for for each test
+   3), user answers associate with each question.
+   4), so if the test can be saved for later complete or go back to change the previous answer.
+   5), for each test, track the start and end time.
